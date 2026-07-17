@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Wellness from "./pages/Wellness";
 import AIAssistant from "./pages/AIAssistant";
+import Family from "./pages/Family";
 import SOS from "./pages/SOS";
 import Hospitals from "./pages/Hospitals";
 
@@ -16,7 +17,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
 
-        {/* NAVIGATION */}
+        {/* ================= NAVIGATION ================= */}
 
         <div className="navbar">
 
@@ -40,6 +41,10 @@ function App() {
             😊 Wellness
           </Link>
 
+          <Link to="/family">
+            👨‍👩‍👧 Family
+          </Link>
+
           <Link to="/ai">
             🤖 AI Assistant
           </Link>
@@ -54,7 +59,7 @@ function App() {
 
         </div>
 
-        {/* ROUTES */}
+        {/* ================= ROUTES ================= */}
 
         <Routes>
 
@@ -84,6 +89,11 @@ function App() {
           />
 
           <Route
+            path="/family"
+            element={<Family />}
+          />
+
+          <Route
             path="/ai"
             element={<AIAssistant />}
           />
@@ -100,7 +110,7 @@ function App() {
 
         </Routes>
 
-        {/* FOOTER */}
+        {/* ================= FOOTER ================= */}
 
         <footer
           style={{
@@ -114,7 +124,8 @@ function App() {
           <h2>🛡️ LifeGuard AI</h2>
 
           <p>
-            AI Powered Wellness, Safety & Emergency Platform
+            AI Powered Wellness, Safety &
+            Emergency Platform
           </p>
 
           <p>
@@ -123,11 +134,24 @@ function App() {
           </p>
 
           <p>
-            Protecting Lives Through Intelligent Technology
+            Protecting Lives Through Intelligent
+            Technology
+          </p>
+
+          <hr
+            style={{
+              margin: "20px 0",
+              borderColor: "#555",
+            }}
+          />
+
+          <p>
+            Version 3.1
           </p>
 
           <p>
-            © 2026 LifeGuard AI. All Rights Reserved.
+            © 2026 LifeGuard AI.
+            All Rights Reserved.
           </p>
 
         </footer>
